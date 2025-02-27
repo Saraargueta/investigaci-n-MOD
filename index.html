@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador MOD</title>
+    <style>
+        body { font-family: Arial, sans-serif;background-color: #e0f7fa;color: #00796b;
+            
+        }
+        header {background-color: #00838f;color: white;padding: 20px;text-align: center;
+        }
+        section {margin: 20px;padding: 20px; background-color: #ffffff;border-radius: 8px;box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {color: #002079;
+        }
+        .example { background-color: #b2dfdb; padding: 10px;border-radius: 5px;
+        }
+        footer {text-align: center; padding: 10px; background-color: #00838f; color: white; position: fixed; bottom: 0; width: 100%;
+        }nav {
+            background-color: #c6eef8;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {color: #333;margin: 0 15px;text-decoration: none; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Operador MOD</h1>
+    </header>
+    <nav>
+        <a href="aplicaciondemod.html">Aplicacion de mod</a>
+       
+
+    <section>
+        <h2>¿Qué es el operador MOD?</h2>
+        <div class="content">
+            <p>El operador <mark>MOD</mark> Operador aritmético de módulo o resto de una división entera. La palabra reservada MOD y el símbolo % son sinónimos.
+
+                Este operador se utiliza en las expresiones aritméticas entre dos operandos, para obtener el módulo del primero partido por el segundo.
+                
+                Por ejemplo 7 MOD 3 devolverá 1, ya que al realizar la división entera de 7 entre 3 se obtiene 2 como cociente y 1 como resto.
+                
+                Es decir, que n MOD m siempre devolverá un número dentro del rango (0..m-1).
+                
+                Para comprender de forma sencilla cómo obtener el resto de una operación n MOD m se pueden seguir los siguientes pasos:
+                
+                Paso 1 - Si n es menor que m, el resultado de la operación MOD es n.
+                
+                Paso 2 - (Cuando n es mayor o igual que m) se le resta m a n y se vuelve al paso 1.
+                
+                 </p>
+            <p> Uso: Este operador se utiliza en ocasiones en los programas en los que se requiere que una variable contador varíe entre 0 y otro número siempre; si se quiere, por ejemplo, que la variable x varíe entre 0 y 319 indefinidamente (x=0, x=1, x=2, ..., x=319, x=0, x=1, ...) se podría optar por lo siguiente:
+
+                x=0;
+                LOOP{
+                    x=x+1;
+                    if (x==320) x=0;
+                    // ...
+                }
+              Pero muchos programas sustituyen estas sentencias por las siguientes:
+              
+                x=0;
+                LOOP{
+                    x=(x+1) MOD 320;
+                    // ...
+                }
+              que realizan exactamente la misma función, ya que el operador MOD truncará la expresión cuando sea mayor o igual que 320 a un valor menor.
+             
+    </section>
+
+    
+    <footer>
+        
+    </footer>
+</body>
+</html>
